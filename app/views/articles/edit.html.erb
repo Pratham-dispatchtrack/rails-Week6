@@ -1,4 +1,4 @@
-<h1>Create new article</h1>
+<h1>Edit article</h1>
 
 <% if @new_article.errors.any? %>
 <h2>These are errors</h2>
@@ -11,7 +11,7 @@
 
 
 
-<%= form_with scope: :article, url: articles_path, local: true do |f| %>
+<%= form_with(model: @new_article, local: true) do |f| %>
     <p>
         <%= f.label :title %><br>
         <%= f.text_field :title%>
@@ -27,4 +27,5 @@
     </p>
 <%end %>
 
+<%= link_to 'Return', articles_path(@articles) %>
 

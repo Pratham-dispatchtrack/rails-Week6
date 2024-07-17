@@ -2,3 +2,8 @@
 
 <p><strong>Title:</strong> <%= @article.title %></P>
 <p><strong>Description:</strong> <%= @article.description %></p>
+
+<%= link_to 'edit', edit_article_path(@article) %>
+<%= button_to 'Delete', article_path(@article), method: 'delete', data: {confirm: "Are you Sure?"}  %>
+<%= link_to 'Return', articles_path(@articles) %>
+
