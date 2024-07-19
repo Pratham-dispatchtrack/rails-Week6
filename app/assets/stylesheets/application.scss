@@ -34,7 +34,7 @@
     margin-top: 25px;
   }
 
-  .card {
+  #card {
     background-image: asset-url('t20worldcup2022-1665836173.jpg');
     background-position: center center;
     background-repeat: no-repeat;
@@ -49,6 +49,7 @@ body {
 
 #page-content {
   flex: 1 0 auto;
+  background-color: #b8b4b4;
 }
 
 /* Other Classes for Page Styling */
