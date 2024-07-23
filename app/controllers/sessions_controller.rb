@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class SessionsController < ApplicationController
     before_action :set_article, only: [:show, :update, :edit, :destroy]
    
     def show

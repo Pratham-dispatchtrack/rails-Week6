@@ -1,0 +1,31 @@
+
+
+<center>
+<div class="container">
+<h1 class="text-center">Articles listing page</h1>
+
+<% @users.each do |user| %>
+<div class="row">
+    <div class="col8">
+      <div class="card shadow  mb-5 bg-body-tertiary rounded">
+      <div class="card-header">
+        by <%= user.username %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= pluralize(user.articles.count, "article") %> </h5>
+        <%= link_to "View", user, class: "btn btn-outline-success" %>
+        <%= link_to "Edit", edit_user_path(user), class: "btn btn-outline-info" %>
+      </div>
+      <div class="card-footer text-muted">
+        <small>Joined <%= time_ago_in_words(user.created_at) %> ago, 
+        edited <%= time_ago_in_words(user.updated_at) %> ago</small>
+      </div>
+  </div>
+</div>
+</div>
+
+
+<% end %>
+</center>
+
+
